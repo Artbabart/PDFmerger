@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF merger</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF merger</h1>
+        <form id="upload-form">
+        <!-- <form method="post" enctype="multipart/form-data"> -->
+            <div id="drop-area">
+                <p> Drag the PDF files here!</p>
+                <input type="file" id="fileElem" name="pdf_files" accept=".pdf" multiple>
+                <label for="fileElem">Choose the PDF files</label>
+                <ul id="file-list"></ul>
+            </div>
+            <input type="submit" value="Merge PDF">
+        </form>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <!-- <form method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_files" accept=".pdf" multiple>
+        <input type="submit" value="Merge PDF">
+    </form> -->
+</body>
+</html>
